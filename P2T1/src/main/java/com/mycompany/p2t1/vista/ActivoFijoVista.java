@@ -5,7 +5,9 @@
 package com.mycompany.p2t1.vista;
 
 import com.mycompany.p2t1.controlador.ActivoFijoControlador;
+import java.awt.TextField;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -55,18 +57,38 @@ public class ActivoFijoVista extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         textFieldCode.setText("000");
+        textFieldCode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldCodeKeyTyped(evt);
+            }
+        });
 
         textFieldNombre.setText("LOREM IPSUM");
 
         textFieldPrecio.setText("00.00");
+        textFieldPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldPrecioKeyTyped(evt);
+            }
+        });
 
         textFieldMarca.setText("LOREM IPSUM");
 
         textFieldProveedor.setText("LOREM IPSUM");
 
         textFieldNExistencias.setText("999");
+        textFieldNExistencias.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldNExistenciasKeyTyped(evt);
+            }
+        });
 
         textFieldVidaUtil.setText("0");
+        textFieldVidaUtil.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldVidaUtilKeyTyped(evt);
+            }
+        });
 
         textFieldUbicacion.setText("LOREM IPSUM");
 
@@ -221,6 +243,40 @@ public class ActivoFijoVista extends javax.swing.JDialog {
 
         }
     }//GEN-LAST:event_button3ActionPerformed
+
+    private void textFieldCodeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldCodeKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_textFieldCodeKeyTyped
+
+    private void textFieldPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldPrecioKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        TextField textField = (TextField) evt.getSource();
+        String text = textField.getText();
+
+        if (!Character.isDigit(c) && c != '.' || (c == '.' && text.contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_textFieldPrecioKeyTyped
+
+    private void textFieldNExistenciasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldNExistenciasKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_textFieldNExistenciasKeyTyped
+
+    private void textFieldVidaUtilKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldVidaUtilKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_textFieldVidaUtilKeyTyped
 
     /**
      * @param args the command line arguments

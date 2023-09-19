@@ -145,6 +145,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldCodeKeyTyped"/>
+          </Events>
         </Component>
         <Component class="java.awt.TextField" name="textFieldNombre">
           <Properties>
@@ -155,6 +158,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="00.00"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldPrecioKeyTyped"/>
+          </Events>
         </Component>
         <Component class="java.awt.TextField" name="textFieldMarca">
           <Properties>
@@ -170,11 +176,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="999"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldNExistenciasKeyTyped"/>
+          </Events>
         </Component>
         <Component class="java.awt.TextField" name="textFieldVidaUtil">
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldVidaUtilKeyTyped"/>
+          </Events>
         </Component>
         <Component class="java.awt.TextField" name="textFieldUbicacion">
           <Properties>
