@@ -1,6 +1,5 @@
 package org.example.problema1;
 
-// Subclase Camión
 public class VehiculoCamion extends Vehiculo {
 
     private double tonelaje;

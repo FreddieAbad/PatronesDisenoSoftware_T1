@@ -2,13 +2,16 @@ package org.example.problema1;
 
 public class VehiculoFactory extends VehiculoAbstractFactory{
     @Override
-    public Vehiculo crearVehiculoFactory(String tipoVehiculo) {
+    public Vehiculo crearVehiculoFactory(String tipoVehiculo, double caracteristicaVehiculo) {
         if (tipoVehiculo.equals("Auto")) {
-            return new VehiculoAuto(2000);
+            //Auto tiene cilindraje
+            return new VehiculoAuto((int)caracteristicaVehiculo);
         } else if (tipoVehiculo.equals("Camioneta")) {
-            return new VehiculoCamioneta(5);
+            //Camioneta tiene capacidad de carga
+            return new VehiculoCamioneta(caracteristicaVehiculo);
         } else if (tipoVehiculo.equals("Camion")) {
-            return new VehiculoCamion(350);
+            //Camion tiene tonelaje
+            return new VehiculoCamion(caracteristicaVehiculo);
         } else {
             throw new IllegalArgumentException("Tipo de vehículo no válido");
         }

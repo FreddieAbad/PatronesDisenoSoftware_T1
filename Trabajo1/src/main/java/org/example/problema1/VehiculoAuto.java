@@ -1,6 +1,5 @@
 package org.example.problema1;
 
-// Subclase Auto
 public class VehiculoAuto extends Vehiculo {
 
     private int cilindraje;
@@ -11,7 +10,6 @@ public class VehiculoAuto extends Vehiculo {
 
     @Override
     public double calcularCostoMatricula() {
-        // Cálculo específico para Autos
-        return this.cilindraje*5;// calcular el costo de matrícula para Autos;
+        return this.cilindraje*5;
     }
 }
