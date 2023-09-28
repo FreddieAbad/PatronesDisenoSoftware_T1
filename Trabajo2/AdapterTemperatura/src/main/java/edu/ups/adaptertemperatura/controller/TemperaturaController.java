@@ -14,8 +14,8 @@ public class TemperaturaController {
     private static Adapter temperaturaAdapter = new Adapter();
 
     
-    public Adapter registrarTemperatura (String tipo, double temperatura){
-        temperaturaAdapter.registrarTemperatura(tipo, temperatura);
-        return temperaturaAdapter;
+    public String registrarTemperatura (String tipo, double temperatura){
+        String respuesta=temperaturaAdapter.registrarTemperatura(tipo, temperatura);
+        return respuesta;
     }
 }

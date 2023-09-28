@@ -4,11 +4,15 @@
  */
 package edu.ups.adaptertemperatura.model;
 
+import java.awt.List;
+
 /**
  *
  * @author PSI
  */
 public interface IRegistroTemperatura {
-        public abstract boolean  registrarTemperatura(String dispositivo, double temperatura);
+        public abstract String  registrarTemperatura(String dispositivo, double temperatura);
+
+        
 
 }

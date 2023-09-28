@@ -9,8 +9,23 @@ package edu.ups.adaptertemperatura.model;
  * @author PSI
  */
 public class DispositivoCelsius {
-     public boolean registrarTemperatura(double temperatura) {
-        System.out.println("Registrado Temperatura Celsius: "+ temperatura);
-        return true;
-     }
+
+    private double temperatura;
+    private String tipo;
+
+    public String registrarTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+        this.tipo = "Celsius";
+
+        System.out.println("Registrado Temperatura Celsius: " + temperatura);
+        //return true;
+        return "DispositivoCelsius{" + "temperatura=" + temperatura + ", tipo=" + tipo + '}';
+
+    }
+
+    @Override
+    public String toString() {
+        return "DispositivoCelsius{" + "temperatura=" + temperatura + ", tipo=" + tipo + '}';
+    }
+
 }
